@@ -1,7 +1,7 @@
 
 # Appended fragment from meta-mender-community/meta-mender-raspberrypi/templates
 
-MACHINE ?= "raspberrypi3"
+MACHINE = "raspberrypi5"
 
 RPI_USE_U_BOOT = "1"
 MENDER_BOOT_PART_SIZE_MB = "64"
@@ -10,5 +10,7 @@ IMAGE_FSTYPES:remove = " rpi-sdimg"
 
 MENDER_FEATURES_ENABLE:append = " mender-uboot mender-image-sd"
 MENDER_FEATURES_DISABLE:append = " mender-grub mender-image-uefi"
+
+PREFERRED_VERSION_u-boot = "2024.04-rc4"
 
 ENABLE_UART = "1"

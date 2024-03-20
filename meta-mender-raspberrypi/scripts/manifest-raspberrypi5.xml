@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+  <remote fetch="https://git.yoctoproject.org/git" name="yocto"/>
+  <remote fetch="https://github.com/openembedded"  name="oe"/>
+  <remote fetch="https://github.com/swiftbot-labs"      name="sbl"/>
+  <remote fetch="https://github.com/dev-sda1"      name="sda1"/>
+
+  <project name="poky" remote="yocto" revision="kirkstone" path="sources/poky"/>
+  <project name="meta-openembedded" remote="oe" revision="kirkstone" path="sources/meta-openembedded"/>
+  <project name="meta-raspberrypi" remote="sbl" revision="master" path="sources/meta-raspberrypi"/>
+  <project name="meta-uboot-rpi5" remote="sda1" revision="main" path="sources/meta-uboot-rpi5"/>
+
+  <include name="scripts/mender.xml"/>
+
+</manifest>
